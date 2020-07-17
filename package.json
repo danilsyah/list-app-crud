@@ -4,7 +4,7 @@
   "description": "CRUD application examples (Create, Read, Update, Delete) use nodejs and express framework and use a MySQL database.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": ".\\node_modules\\.bin\\nodemon app.js"
   },
   "repository": {
     "type": "git",

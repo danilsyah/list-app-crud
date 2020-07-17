@@ -5,7 +5,7 @@ CRUD application examples (Create, Read, Update, Delete) use nodejs and express 
 # Configuration Step NodeJS and Express Framework
 
 1. open terminal / cmd in your PC
-2. arahkan ke path directory project, dalam contoh kasus ini, nama project : list-app-crud.
+2. arahkan ke path directory project, dalam contoh kasus ini, nama folder project : list-app-crud.
 
 - E:\Cloud Mega\bootcamp-progate\4_NodeJS\list-app-crud (master)
 
@@ -25,9 +25,9 @@ CRUD application examples (Create, Read, Update, Delete) use nodejs and express 
 
 - jalankan : npm install nodemon
 - buka file <b>package.json</b>
-- cari kolom bernama <b>scripts</b> kemudian ganti isi nya dengan
-- (windows) : "start": ".\\node_modules\\.bin\\nodemon app.js"
-- (macOS) : "start": "./node_modules/.bin/nodemon app.js"
+- cari kolom bernama <b>scripts</b> kemudian ganti isi nya dengan :
+  - (windows) : "start": ".\\node_modules\\.bin\\nodemon app.js"
+  - (macOS) : "start": "./node_modules/.bin/nodemon app.js"
 
 7. Jalankan perintah berikut dan periksa apakah kamu bisa memulai server menggunakan nodemon.
 
