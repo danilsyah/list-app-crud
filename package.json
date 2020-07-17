@@ -1,0 +1,24 @@
+{
+  "name": "list-app-crud",
+  "version": "1.0.0",
+  "description": "CRUD application examples (Create, Read, Update, Delete) use nodejs and express framework and use a MySQL database.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danilsyah/list-app-crud.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danilsyah/list-app-crud/issues"
+  },
+  "homepage": "https://github.com/danilsyah/list-app-crud#readme",
+  "dependencies": {
+    "ejs": "^3.1.3",
+    "express": "^4.17.1"
+  }
+}
