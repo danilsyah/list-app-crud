@@ -2,7 +2,7 @@
 
 CRUD application examples (Create, Read, Update, Delete) use nodejs and express framework and use a MySQL database.
 
-# Configuration Step NodeJS and Express Framework
+# Setup Project Environment Local
 
 1. open terminal / cmd in your PC
 2. arahkan ke path directory project, dalam contoh kasus ini, nama folder project : list-app-crud.
@@ -32,3 +32,9 @@ CRUD application examples (Create, Read, Update, Delete) use nodejs and express 
 7. Jalankan perintah berikut dan periksa apakah kamu bisa memulai server menggunakan nodemon.
 
 - npm run start
+
+# Menghubungkan Aplikasi NodeJS ke MySQL
+
+1. jalankan di terminal/cmd :
+
+- npm install mysql
