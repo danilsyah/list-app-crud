@@ -6,8 +6,34 @@ const app = express();
 // route asset folder public
 app.use(express.static("public"));
 
+// create object connection database
+const connection = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "",
+  database: "list_app"
+});
+
+// check condition database
+connection.connect(function (err) {
+  if (err) {
+    console.error("error connection database : " + err.stack);
+    return;
+  }
+  console.log("connection database success");
+});
+
 app.get('/', (req, res) => {
   res.render('top.ejs');
+});
+
+app.get("/index", (req, res) => {
+  connection.query("SELECT * FROM schedules", (error, results) => {
+    console.log(results);
+    res.render("index.ejs", {
+      schedules: results
+    });
+  });
 });
 
 app.listen(3000);
