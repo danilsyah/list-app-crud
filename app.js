@@ -6,6 +6,11 @@ const app = express();
 // route asset folder public
 app.use(express.static("public"));
 
+// config request form value
+app.use(express.urlencoded({
+  extended: false,
+}));
+
 // create object connection database
 const connection = mysql.createConnection({
   host: "localhost",
@@ -34,6 +39,20 @@ app.get("/index", (req, res) => {
       schedules: results
     });
   });
+});
+
+app.get("/add", (req, res) => {
+  res.render("add.ejs");
+});
+
+app.post("/create", (req, res) => {
+  connection.query(
+    "INSERT INTO schedules(description) VALUES (?)",
+    [req.body.itemDesc],
+    (error, results) => {
+      res.redirect("/index");
+    }
+  );
 });
 
 app.listen(3000);

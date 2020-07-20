@@ -15,7 +15,7 @@
   <div class="container">
     <div class="container-header">
       <h1>Schedules List</h1>
-      <a href="#" class="new-button">+ ADD</a>
+      <a href="/add" class="new-button">+ ADD</a>
     </div>
     <div class="index-table-wrapper">
       <div class="table-head">
@@ -28,6 +28,12 @@
           <div class="item-data">
             <span class="id-column"><%= schedule.id%> </span>
             <span class="name-column"><%= schedule.description %> </span>
+          </div>
+          <div class="item-menu">
+            <form action="" method="POST">
+              <input type="submit" value="Delete">
+            </form>
+            <a href="#">Edit</a>
           </div>
         </li>
         <% }); %>
