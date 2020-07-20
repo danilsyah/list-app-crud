@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Add</title>
+  <title>Edit</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -14,15 +14,15 @@
   </header>
   <div class="container">
     <div class="container-header">
-      <h1>Add Schedule</h1>
+      <h1>Edit Schedule</h1>
+      <a href="/index" class="cancel-button">Cancel</a>
     </div>
     <div class="item-form-wrapper">
-      <p class="form-label">Apa Kegiatan anda</p>
-      <form action="/create" method="POST">
-        <input type="text" name="itemDesc" required placeholder="Input Decription..." autofocus>
-        <input type="submit" name="" id="" value="Save">
+      <p class="form-label">Schedule</p>
+      <form action="/update/<%= item.id %> " method="POST">
+        <input type="text" value="<%= item.description %> " name="itemDesc" autofocus required>
+        <input type="submit" value="Update">
       </form>
-      <a href="/index" class="cancel-button">Back</a>
     </div>
   </div>
 </body>
