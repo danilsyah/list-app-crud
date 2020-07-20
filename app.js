@@ -41,15 +41,29 @@ app.get("/index", (req, res) => {
   });
 });
 
+// route page add
 app.get("/add", (req, res) => {
   res.render("add.ejs");
 });
 
+// route insert data
 app.post("/create", (req, res) => {
   connection.query(
     "INSERT INTO schedules(description) VALUES (?)",
     [req.body.itemDesc],
     (error, results) => {
+      res.redirect("/index");
+    }
+  );
+});
+
+// route delete data
+app.post("/delete/:id", (req, res) => {
+  connection.query(
+    "DELETE FROM schedules WHERE id = ? ",
+    [req.params.id],
+    (error, results) => {
+      console.log(`Data with id = ${req.params.id} successs save`);
       res.redirect("/index");
     }
   );

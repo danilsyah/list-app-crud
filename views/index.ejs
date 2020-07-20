@@ -30,7 +30,7 @@
             <span class="name-column"><%= schedule.description %> </span>
           </div>
           <div class="item-menu">
-            <form action="" method="POST">
+            <form action="/delete/<%= schedule.id %> " method="POST">
               <input type="submit" value="Delete">
             </form>
             <a href="#">Edit</a>
